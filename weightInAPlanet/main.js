@@ -6,11 +6,11 @@ document.querySelector('#app').innerHTML = `
 <header class="w-1/2 justify-start">
   <h1 class="text-5xl w-full mt-6 mb-16">Calculate a weight of an object on a planet</h1>
 
-  <input type="text" id="mass" placeholder="Mass in Kilogram" />
-  <select>
-    <option value='none'> --select planet-- </option>
+  <input class="p-1 border-solid border-2 border-sky-500 mr-4 text-lg" type="text" id="mass" placeholder="Mass in Kilogram" />
+  <select class="p-1 border-solid border-2 border-sky-500 mr-4 text-lg">
+    <option value='none'> --Select planet-- </option>
   </select>
-  <button>Calculate weight</button>
+  <button class="bg-sky-800 p-1 border-solid border-2 border-sky-500 mr-4 text-lg">Calculate weight</button>
 </header>
 
 <main class="w-1/2 justify-end">
