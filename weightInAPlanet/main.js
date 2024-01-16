@@ -6,7 +6,7 @@ document.querySelector('#app').innerHTML = `
   <h1 class="text-5xl w-full mt-6 mb-16">Calculate a weight of an object on a planet </h1>
 
   <input class="p-1 border-solid border-2 border-sky-500 text-gray-500 mr-4 text-lg" type="text" id="mass" placeholder="Mass in Kilogram" />
-  <select class="p-1 border-solid border-2 border-sky-500 mr-4 text-lg text-gray-500	">
+  <select id="planet" class="p-1 border-solid border-2 border-sky-500 mr-4 text-lg text-gray-500">
     <option class="border-solid" value='none'> --Select planet-- </option>
     <option class="border-solid" value='Mercury'>Mercury</option>
     <option class="border-solid" value='Venus'>Venus</option>
@@ -14,10 +14,10 @@ document.querySelector('#app').innerHTML = `
     <option class="border-solid" value='Moon'>Moon</option>
     <option class="border-solid" value='Mars'>Mars</option>
   </select>
-  <button class="bg-sky-800 p-1 border-solid border-2 border-sky-500 mr-4 text-lg" id="calculate">Calculate weight</button>
+  <button class="bg-sky-800 p-1 border-solid border-2 border-sky-500 mr-4 text-lg" id="calculate" type="button">Calculate weight</button>
 </header>
 
-<main class="w-1/2 justify-end">
+<main id="planet-info" class="w-1/2 justify-end">
   <div class="flex items-center gap-4 justife-betweend p-4 w-full">
     <div class="w-1/2">
       <img class="w-96" src='./assets/earth.png' />
