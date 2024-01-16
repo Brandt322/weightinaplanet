@@ -1,6 +1,5 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
+import { calculateWeight } from './calculate'
 
 document.querySelector('#app').innerHTML = `
 <header class="w-1/2 justify-start">
@@ -9,10 +8,13 @@ document.querySelector('#app').innerHTML = `
   <input class="p-1 border-solid border-2 border-sky-500 text-gray-500 mr-4 text-lg" type="text" id="mass" placeholder="Mass in Kilogram" />
   <select class="p-1 border-solid border-2 border-sky-500 mr-4 text-lg text-gray-500	">
     <option class="border-solid" value='none'> --Select planet-- </option>
-    <option class="border-solid" value='earth'>Earth</option>
-    <option class="border-solid" value='jupiter'>Jupiter</option>
+    <option class="border-solid" value='Mercury'>Mercury</option>
+    <option class="border-solid" value='Venus'>Venus</option>
+    <option class="border-solid" value='Earth'>Earth</option>
+    <option class="border-solid" value='Moon'>Moon</option>
+    <option class="border-solid" value='Mars'>Mars</option>
   </select>
-  <button class="bg-sky-800 p-1 border-solid border-2 border-sky-500 mr-4 text-lg">Calculate weight</button>
+  <button class="bg-sky-800 p-1 border-solid border-2 border-sky-500 mr-4 text-lg" id="calculate">Calculate weight</button>
 </header>
 
 <main class="w-1/2 justify-end">
@@ -24,7 +26,6 @@ document.querySelector('#app').innerHTML = `
       <p>Texto de prueba <span class="text-white font-bold">Pluton</span></p>
       <div class="bg-[#454646] rounded-[50%] flex justify-center items-center  w-32 h-32 text-white font-bold text-center">7.00000 N</div>
     </div>
-
   </div>
 
   <div class="flex justify-center rounded-md bg-[#242424] p-4 hidden">
@@ -32,3 +33,5 @@ document.querySelector('#app').innerHTML = `
   </div>
 </main>
 `
+
+calculateWeight(document.getElementById('calculate'))
