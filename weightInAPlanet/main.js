@@ -23,19 +23,19 @@ document.querySelector('#app').innerHTML = `
 </header>
 
 <main class="w-1/2 justify-end">
-  <div class="flex items-center gap-4 justife-betweend p-4 w-full">
+  <div id="content-img-weigth" class="hidden flex items-center gap-4 justife-betweend p-4 w-full">
     <div class="w-1/2">
-      <img id="imgPlanets" class="w-96 hidden" src='./assets/earth.png' />
+      <img id="imgPlanets" class="w-96" src='./assets/earth.png' />
     </div>
     
-    <div id="content-d-w" class="hidden flex flex-col bg-[#242424] border-solid rounded-lg p-6 w-1/2 text-2xl items-center gap-4">
+    <div class=" flex flex-col bg-[#242424] border-solid rounded-lg p-6 w-1/2 text-2xl items-center gap-4">
       <p id="description">Texto de prueba </p><span id="spanPlanet" class="text-white font-bold">Pluton</span>
       <div id="weigth" class="bg-[#454646] rounded-[50%] flex justify-center items-center  w-32 h-32 text-white font-bold text-center">7.00000 N</div>
     </div>
   </div>
 
-  <div id="content-fail" class="flex justify-center rounded-md bg-[#242424] p-4 hidden">
-    <p id="p-fail" class="text-4xl text-center rounded-md bg-[#454646] p-4"></p>
+  <div id="content-message" class="flex justify-center rounded-md bg-[#242424] p-4 hidden">
+    <p id="message" class="text-4xl text-center rounded-md bg-[#454646] p-4"></p>
   </div>
 </main>
 `//CAMBIOS AL SPAN

@@ -1,9 +1,9 @@
 import { gravities } from "./gravities"
 
 export const calculateWeight = (element) => {
-  const hidden = document.getElementById('content-d-w')
-  const hidden2 = document.getElementById('content-fail')
-  const p = document.getElementById('p-fail')
+  const hiddenImgWeigth = document.getElementById('content-img-weigth')
+  const hiddenMessage = document.getElementById('content-message')
+  const message = document.getElementById('message')
 
   const mass = document.getElementById('mass')
   const weight = document.getElementById('weigth')
@@ -14,33 +14,36 @@ export const calculateWeight = (element) => {
   
   
   element.addEventListener('click', () => {
-    let weightTotal 
-    for( let value in gravities) {
-      if(value == planet.value){
-        weightTotal = gravities[value] * mass.value
-      }
-    }
+    hiddenImgWeigth.classList.remove('hidden')
+    hiddenMessage.classList.add('hidden')
     
     if(planet.value !=='none' && mass.value !== '' ){
-      imgPlanets.classList.remove('hidden')
-      hidden.classList.remove('hidden')
-      imgPlanets.src = `./assets/${planet.value}.png`
-      description.textContent = 'The weight of the object on'
-      spanPlanet.textContent = planet.value
-      weight.textContent = weightTotal
+      for( let value in gravities) {
+        if(value == planet.value){
+          weight.textContent = gravities[value] * mass.value
+          imgPlanets.src = `./assets/${planet.value}.png`
+          description.textContent = 'The weight of the object on'
+          spanPlanet.textContent = planet.value
+        }
+      }
     } 
 
     if(planet.value=='none'&& mass.value !==''){
-      hidden2.classList.remove('hidden')
-      hidden.classList.add('hidden')
-      p.textContent = 'You also need to select a planet'
+      hiddenMessage.classList.remove('hidden')
+      hiddenImgWeigth.classList.add('hidden')
+      message.textContent = 'You need to select a planet'
     } 
 
     if(planet.value !=='none'&& mass.value ==''){
-      hidden2.classList.remove('hidden')
-      hidden.classList.add('hidden')
-      p.textContent = 'Mass is required'
+      hiddenMessage.classList.remove('hidden')
+      hiddenImgWeigth.classList.add('hidden')
+      message.textContent = 'Mass is required'
     }
 
+    if(planet.value =='none'&& mass.value ==''){
+      hiddenMessage.classList.remove('hidden')
+      hiddenImgWeigth.classList.add('hidden')
+      message.textContent = 'You need a mass and you need to select a planet'
+    }
   })
 }
