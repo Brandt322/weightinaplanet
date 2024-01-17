@@ -13,6 +13,11 @@ document.querySelector('#app').innerHTML = `
     <option class="border-solid" value='Earth'>Earth</option>
     <option class="border-solid" value='Moon'>Moon</option>
     <option class="border-solid" value='Mars'>Mars</option>
+    <option class="border-solid" value='Jupiter'>Jupiter</option>
+    <option class="border-solid" value='Saturn'>Saturn</option>
+    <option class="border-solid" value='Uranus'>Uranus</option>
+    <option class="border-solid" value='Neptune'>Neptune</option>
+    <option class="border-solid" value='Pluto'>Pluto</option>
   </select>
   <button class="bg-sky-800 p-1 border-solid border-2 border-sky-500 mr-4 text-lg" id="calculate" type="button">Calculate weight</button>
 </header>
@@ -22,13 +27,14 @@ document.querySelector('#app').innerHTML = `
     <div class="w-1/2">
       <img class="w-96" src='./assets/earth.png' />
     </div>
+
     <div class="flex flex-col bg-[#242424] border-solid rounded-lg p-6 w-1/2 text-2xl items-center gap-4">
       <p>Texto de prueba <span class="text-white font-bold">Pluton</span></p>
-      <div class="bg-[#454646] rounded-[50%] flex justify-center items-center  w-32 h-32 text-white font-bold text-center">7.00000 N</div>
+      <div id="weight" class="bg-[#454646] rounded-[50%] flex justify-center items-center  w-32 h-32 text-white font-bold text-center">7.00000 N</div>
     </div>
   </div>
 
-  <div class="flex justify-center rounded-md bg-[#242424] p-4 hidden">
+  <div id="massRequired" class="flex justify-center rounded-md bg-[#242424] p-4 hidden">
     <p class="text-4xl text-center rounded-md bg-[#454646] p-4">Mass is required</p>
   </div>
 </main>
