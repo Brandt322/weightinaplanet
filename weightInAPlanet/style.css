@@ -12,7 +12,3 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-#app {
-  background-image: url('./assets/galaxy.gif');
-}
