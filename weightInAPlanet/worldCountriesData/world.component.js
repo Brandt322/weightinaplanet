@@ -37,10 +37,6 @@ export const worldData = (elements) => {
 
 
   const createChart = (labels, data, label, chart) => {
-    // if (myChart) {
-    //   myChart.destroy();
-    // }
-
     myChart = new Chart(chart, {
       type: 'bar',
       data: {
