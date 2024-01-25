@@ -17,7 +17,11 @@ export const worldData = (elements) => {
     for (const country of moreCountries) {
       if (country.name.toUpperCase().includes(letter)) {
         // console.log(country.name)
-        container.innerHTML += `<div class="w-40 h-40 rounded-md border-2 border-orange-500 bg-[#242424] flex items-center justify-center"><h1 class="text-1xl text-center  text-orange-500">${country.name.toUpperCase()}</h1></div>`
+        container.innerHTML += `
+        <div class="w-40 h-40 rounded-md border-2 border-orange-500 bg-[#242424] flex flex-col items-center justify-center p-6 g-8">
+          <img src="${country.flag}" alt="${country.name}" class="w-20 h-20 mb-2">
+          <h1 class="text-1xl text-center  text-orange-500">${country.name.toUpperCase()}</h1>
+        </div>`
         total.textContent = container.children.length
         displayedCountries.push(country)
       }
